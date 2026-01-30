@@ -20,7 +20,7 @@ const IconNav = () => {
             </div>
             <Link to="/tours" className="icon-nav-item" style={{ textDecoration: 'none' }}>
                 <FaHiking className="nav-icon" />
-                <span>Tours & Tracking</span>
+                <span>Tours & Trekking</span>
             </Link>
             <Link to="/gallery" className="icon-nav-item" style={{ textDecoration: 'none' }}>
                 <FaImages className="nav-icon" />

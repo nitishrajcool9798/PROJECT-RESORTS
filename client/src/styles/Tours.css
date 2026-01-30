@@ -117,7 +117,7 @@
 
 /* Gallery Section */
 .tours-gallery {
-    padding: 50px 20px 80px 20px;
+    padding: 50px 20px 150px 20px;
     text-align: center;
 }
 
@@ -204,6 +204,7 @@
     color: #fff;
     padding: 80px 20px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .tours-cta h2 {

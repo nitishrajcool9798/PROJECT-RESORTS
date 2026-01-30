@@ -19,11 +19,11 @@ const Experience = () => {
 
             <div className="experience-container container reverse">
                 <div className="exp-image">
-                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tours & Tracking" />
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tours & Trekking" />
                 </div>
                 <div className="exp-content">
                     <h5>ADVENTURE & NATURE</h5>
-                    <h2>Tours & Tracking Mountains</h2>
+                    <h2>Tours & Trekking Mountains</h2>
                     <p>Explore the breathtaking trails and hidden gems of Pangoot. Our guided tours take you through lush forests and majestic peaks for an unforgettable experience.</p>
                     <Link to="/tours" className="btn-primary" style={{ display: 'inline-block', textDecoration: 'none' }}>Know More</Link>
                 </div>

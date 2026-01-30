@@ -19,6 +19,8 @@ const Footer = () => {
                         <h3>Contact Us</h3>
                         <p>Geeli Mitti Marg, Mahrora Village, Opp. to Shaolin Gurukul, Pangot (Post Office), Nainital, Uttarakhand 263001</p>
                         <p>+91 94101 20797</p>
+                        <p>+91 84750 17373</p>
+                        <p>+91 90272 20354</p>
                         <p>hilltoppangot9@gmail.com</p>
                     </div>
 

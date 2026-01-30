@@ -16,7 +16,10 @@ const Tours = () => {
         "/images/Hills/WhatsApp Image 2026-01-15 at 6.21.06 PM.jpeg",
         "/images/Hills/WhatsApp Image 2026-01-15 at 6.21.10 PM (2).jpeg",
         "/images/Hills/WhatsApp Image 2026-01-15 at 6.21.21 PM (1).jpeg",
-        "/images/Hills/WhatsApp Image 2026-01-15 at 6.21.25 PM.jpeg"
+        "/images/Hills/WhatsApp Image 2026-01-15 at 6.21.25 PM.jpeg",
+        "/images/mountains/bird.jpeg",
+        "/images/mountains/deer.jpeg",
+        "/images/mountains/waterfall.mp4"
     ];
 
     const openLightbox = (img) => {
@@ -29,6 +32,8 @@ const Tours = () => {
         document.body.style.overflow = 'auto'; // Restore scrolling
     };
 
+    const isVideo = (src) => src.toLowerCase().endsWith('.mp4');
+
     return (
         <div className="tours-page">
             {/* Hero Section */}
@@ -36,7 +41,7 @@ const Tours = () => {
                 <div className="tours-hero-overlay"></div>
                 <div className="tours-hero-content container">
                     <h1>Explore the Wild</h1>
-                    <p>Tours, Tracking & Mountain Adventures</p>
+                    <p>Tours, Trekking & Mountain Adventures</p>
                 </div>
             </section>
 
@@ -82,7 +87,11 @@ const Tours = () => {
                 <div className="gallery-grid">
                     {galleryImages.map((img, index) => (
                         <div key={index} className="gallery-item" onClick={() => openLightbox(img)}>
-                            <img src={img} alt={`Tours and Tracking ${index + 1}`} />
+                            {isVideo(img) ? (
+                                <video src={img} muted loop playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            ) : (
+                                <img src={img} alt={`Tours and Trekking ${index + 1}`} />
+                            )}
                             <div className="gallery-overlay">
                                 <span className="plus-icon">+</span>
                             </div>
@@ -98,7 +107,11 @@ const Tours = () => {
                         <button className="lightbox-close" onClick={closeLightbox}>
                             <FaTimes />
                         </button>
-                        <img src={selectedImage} alt="Full Size View" />
+                        {isVideo(selectedImage) ? (
+                            <video src={selectedImage} controls autoPlay className="lightbox-media" style={{ maxWidth: '90vw', maxHeight: '90vh' }} />
+                        ) : (
+                            <img src={selectedImage} alt="Full Size View" className="lightbox-media" />
+                        )}
                     </div>
                 </div>
             )}

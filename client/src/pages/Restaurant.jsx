@@ -13,18 +13,19 @@ const restaurantImages = [
 const signatureDishes = [
     {
         name: "Kumaoni Thali",
-        desc: "A traditional platter featuring Bhatt ki Churkani, Aloo ke Gutke, and Mandua Roti.",
-        price: "₹450"
+        desc: "A traditional platter featuring Bhatt ki Churkani, Aloo ke Gutke, and Mandua Roti."
     },
     {
         name: "Himalayan Trout",
-        desc: "Fresh river trout grilled to perfection with local herbs and lemon butter sauce.",
-        price: "₹650"
+        desc: "Fresh river trout grilled to perfection with local herbs and lemon butter sauce."
     },
     {
         name: "Pangoot Special Curry",
-        desc: "Chef's special vegetable curry made with organic produce from local farms.",
-        price: "₹350"
+        desc: "Chef's special vegetable curry made with organic produce from local farms."
+    },
+    {
+        name: "Pahadi Smoked Chicken",
+        desc: "Tender chicken marinated in local spices and slow-cooked over wood fire for a smoky flavor."
     }
 ];
 
@@ -130,7 +131,6 @@ const Restaurant = () => {
                                     <h3>{dish.name}</h3>
                                     <p>{dish.desc}</p>
                                 </div>
-                                <div className="menu-price">{dish.price}</div>
                             </div>
                         ))}
                     </div>
