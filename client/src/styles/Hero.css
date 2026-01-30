@@ -1,0 +1,120 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #0b1c2c;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 0px;
+}
+
+.booking-container {
+    width: 75%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    /* Centered, with 40px from bottom */
+    z-index: 100;
+    position: relative;
+    border-radius: 12px;
+    /* Very little oval (subtle rounding) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none !important;
+    outline: none !important;
+    overflow: hidden;
+}
+
+/* Background Slider Container */
+.hero-backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Individual Background Layers */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    transform: scale(1);
+}
+
+.hero-bg.active {
+    opacity: 1;
+    animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(11, 28, 44, 0.3) 0%, rgba(11, 28, 44, 0.6) 100%);
+    /* Adjusted for visibility */
+    z-index: 1;
+}
+
+@keyframes kenBurns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Slider Arrows */
+.slider-arrow {
+    display: none;
+}
+
+.slider-arrow:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.slider-arrow.left {
+    left: 40px;
+}
+
+.slider-arrow.right {
+    right: 40px;
+}
+
+/* Hide original content for now to match screenshot */
+.hero-content {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .slider-arrow.left {
+        left: 10px;
+    }
+
+    .slider-arrow.right {
+        right: 10px;
+    }
+}

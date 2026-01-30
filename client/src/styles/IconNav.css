@@ -1,0 +1,61 @@
+/* Icon Nav Styles */
+.icon-nav-container {
+    position: relative;
+    /* Removed absolute positioning to stack in Hero flex container */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    /* Slightly darker for contrast */
+    padding: 15px 0;
+    z-index: 90;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    border: none !important;
+    box-shadow: none !important;
+    transform: translateZ(0);
+    /* Force GPU layer */
+}
+
+.icon-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin: 0 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 50px;
+    opacity: 0.9;
+}
+
+.icon-nav-item:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.nav-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.icon-nav-item span {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.icon-nav-item:hover {
+    transform: translateY(-5px);
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+    .icon-nav-container {
+        display: none;
+        /* Hide on mobile for now as per usual responsive patterns */
+    }
+}

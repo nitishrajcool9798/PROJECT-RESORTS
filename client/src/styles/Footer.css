@@ -1,0 +1,96 @@
+/* Footer Styles */
+.footer {
+    background-color: var(--color-bg-dark);
+    color: #ccc;
+    padding: 60px 0 20px;
+    margin-top: auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h2 {
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.footer-brand span {
+    color: var(--color-primary);
+}
+
+.footer-brand p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-primary);
+}
+
+.footer h3 {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: transparent;
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+}
+
+.subscribe-form button {
+    width: 100%;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}

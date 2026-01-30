@@ -1,0 +1,34 @@
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* Apply to sections generally */
+section {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-timeline: view();
+    /* Modern browser support */
+    animation-range: entry 10% cover 30%;
+}

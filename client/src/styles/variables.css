@@ -1,0 +1,23 @@
+:root {
+  /* Colors */
+  --color-primary: #dba249; /* Gold */
+  --color-primary-hover: #c48e3d;
+  --color-secondary: #0b1c2c; /* Navy */
+  --color-text-light: #ffffff;
+  --color-text-dark: #333333;
+  --color-bg-light: #f8f8f8;
+  --color-bg-dark: #0b1c2c;
+  
+  /* Fonts */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+  
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+}

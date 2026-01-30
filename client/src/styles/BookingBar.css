@@ -1,0 +1,147 @@
+/* Booking Bar Styles */
+.booking-bar-wrapper {
+    position: relative;
+    width: 100%;
+    /* Keeps filling the container */
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Light transparent background */
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    border-bottom: none;
+}
+
+.booking-bar {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 80px;
+    /* Reference looks slightly more compact */
+    max-width: 100%;
+    /* Full width strip */
+    margin: 0;
+}
+
+.booking-field {
+    flex: 1;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    /* Subtle separators */
+}
+
+/* Specific left border for the first item if needed, or stick to right borders */
+.booking-field.location {
+    padding-left: 5%;
+    /* Indent first item slightly */
+}
+
+.booking-field label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.input-group select,
+.input-group input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.input-group input[type="date"] {
+    text-transform: uppercase;
+    color: #444;
+}
+
+.guest-label {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+.booking-action {
+    padding: 8px;
+    /* Padding for the button container */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: none;
+}
+
+.btn-book-online {
+    background-color: #F59E1E;
+    /* Reference Orange */
+    color: #fff;
+    border: 1px solid #e08e18;
+    padding: 0 35px;
+    height: 100%;
+    /* Fill height or slightly less */
+    max-height: 50px;
+    font-family: 'Playfair Display', serif;
+    /* Or matching font */
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    border-radius: 0;
+    /* Boxy look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-book-online:hover {
+    background-color: #e08e18;
+}
+
+
+
+@media (max-width: 1024px) {
+    .booking-bar-wrapper {
+        position: static;
+    }
+
+    .booking-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .booking-field {
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid #eee;
+        padding: 15px 20px;
+    }
+
+    .booking-action,
+    .booking-price {
+        width: 100%;
+        border: none;
+        justify-content: center;
+        padding: 15px;
+    }
+}

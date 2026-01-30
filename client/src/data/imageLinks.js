@@ -1,0 +1,30 @@
+const driveImages = [
+    "/images/drive_1.jpg",
+    "/images/drive_2.jpg",
+    "/images/drive_3.jpg",
+    "/images/drive_4.jpg",
+    "/images/drive_5.jpg",
+    "/images/drive_6.jpg",
+    "/images/drive_7.jpg",
+    "/images/drive_8.jpg",
+    "/images/drive_9.jpg",
+    "/images/drive_10.jpg",
+    "/images/drive_11.jpg",
+    "/images/drive_12.jpg",
+    "/images/drive_13.jpg",
+    "/images/drive_14.jpg",
+    "/images/drive_15.jpg",
+    "/images/drive_16.jpg",
+    "/images/drive_17.jpg",
+    "/images/drive_18.jpg",
+    "/images/drive_19.jpg",
+    "/images/drive_20.jpg",
+    "/images/drive_21.jpg",
+    "/images/drive_22.jpg",
+    "/images/drive_23.jpg",
+    "/images/drive_24.jpg",
+    "/images/drive_25.jpg",
+    "/images/drive_26.jpg"
+];
+
+export default driveImages;

@@ -1,0 +1,210 @@
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    background-color: var(--color-bg-dark);
+    /* Dark background as per screenshot */
+
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Navigation Links */
+/* Navigation Links */
+.nav-left,
+.nav-right {
+    flex: 1;
+    /* Take equal space to center logo */
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    letter-spacing: 0.5px;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: var(--color-primary);
+}
+
+.dropdown-trigger span {
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+/* Center Logo */
+/* Center Logo */
+.logo-center {
+    /* Removed absolute positioning for flexbox centering */
+    display: flex;
+    justify-content: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    /* Reduced gap to 2px */
+    flex-direction: row;
+    /* Tiger icon left, text right */
+}
+
+.tiger-icon {
+    height: 50px;
+    /* filter: brightness(0) invert(1); */
+    /* Removed filter to show original logo colors */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-sub {
+    font-family: 'Great Vibes', cursive;
+    /* Script font for "Resorts By" */
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin-bottom: -5px;
+}
+
+.logo-main {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* Right Actions */
+/* .nav-right moved to top for shared properties */
+
+.btn-outline-gold {
+    border: 1px solid var(--color-primary);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--color-primary);
+    color: #000;
+}
+
+.btn-outline-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 223, 0, 0.8), transparent);
+    /* Yellow/Gold Ray */
+    transition: all 0.5s;
+    animation: shine 4s infinite;
+    /* Faster cycle (4s) */
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    30% {
+        /* Faster movement (takes ~1.2s to cross) */
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-dark);
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    .logo-center {
+        position: static;
+        transform: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
