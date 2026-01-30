@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCalendarAlt, FaUser } from 'react-icons/fa';
+import { FaCalendarAlt, FaUser, FaCheck } from 'react-icons/fa';
 import '../styles/BookingBar.css';
 
 const BookingBar = () => {
@@ -76,7 +76,7 @@ Guests: ${guests}`;
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -430,6 +430,7 @@
 
 /* --- CTA Parallax --- */
 .cta-section-parallax {
+    margin-top: 60px;
     padding: 140px 20px;
     /* More breathing room */
     background-attachment: fixed;

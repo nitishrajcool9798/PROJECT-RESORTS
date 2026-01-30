@@ -92,29 +92,95 @@
 }
 
 .btn-book-online {
-    background-color: #F59E1E;
-    /* Reference Orange */
+    background: linear-gradient(135deg, #F59E1E 0%, #e08e18 100%);
     color: #fff;
-    border: 1px solid #e08e18;
-    padding: 0 35px;
-    height: 100%;
-    /* Fill height or slightly less */
-    max-height: 50px;
-    font-family: 'Playfair Display', serif;
-    /* Or matching font */
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: capitalize;
+    letter-spacing: 1px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     white-space: nowrap;
-    border-radius: 0;
-    /* Boxy look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(245, 158, 30, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: gentlePulse 2s infinite ease-in-out, textGlow 2s infinite ease-in-out;
+    /* Continuous pulse & text glow */
 }
 
 .btn-book-online:hover {
-    background-color: #e08e18;
+    background: linear-gradient(135deg, #e08e18 0%, #c97b10 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(245, 158, 30, 0.5);
+}
+
+.check-icon-btn {
+    font-size: 1.1em;
+}
+
+/* Spark/Shine effect */
+.btn-book-online::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shimmer 3s infinite;
+    /* Continuous shimmer */
+}
+
+@keyframes gentlePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 30, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(245, 158, 30, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 30, 0);
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
 }
 
 
@@ -143,5 +209,21 @@
         border: none;
         justify-content: center;
         padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-book-online {
+        padding: 12px 15px;
+        /* Smaller padding on mobile */
+        font-size: 0.9rem;
+        /* Slightly smaller text */
+        width: 100%;
+        /* Full width */
+        justify-content: center;
+        /* Center text */
+        white-space: normal;
+        /* Allow wrapping if absolutely needed */
+        text-align: center;
     }
 }
